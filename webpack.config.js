@@ -56,6 +56,9 @@ module.exports = {
       filename: "remoteEntry.js", // 构建出来的文件名
       remotes: {
         AppOne: 'AppOne@http://192.168.3.61:7001/remoteEntry.js' // 引用
+      },
+      exposes: {
+        './buttonCommon': './src/components/buttonCommon.vue' // 暴露出去。key，要写相对路径
       }
     }),
   ],
