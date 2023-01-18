@@ -4,6 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <HelloWorld msg="webpack5 + Vue" />
+  <count-down />
 </template>
 
 <style scoped>

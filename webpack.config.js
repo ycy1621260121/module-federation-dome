@@ -9,7 +9,7 @@ module.exports = {
     path: './src/main.js',
   },
   devServer: {
-    port: 7001,
+    port: 7002,
     hot: true,
   },
   module: {
@@ -52,10 +52,10 @@ module.exports = {
       __VUE_OPTIONS_API__: false,
     }),
     new ModuleFederationPlugin({
-      name: "AppOne", // 暴露出去的模块名
+      name: "AppTwo", // 暴露出去的模块名
       filename: "remoteEntry.js", // 构建出来的文件名
-      exposes: {
-        './countDown': './src/components/countDown.vue' // 暴露出去。key，要写相对路径
+      remotes: {
+        AppOne: 'AppOne@http://192.168.3.61:7001/remoteEntry.js' // 引用
       }
     }),
   ],
