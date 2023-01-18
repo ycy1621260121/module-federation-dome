@@ -56,7 +56,10 @@ module.exports = {
       filename: "remoteEntry.js", // 构建出来的文件名
       exposes: {
         './countDown': './src/components/countDown.vue' // 暴露出去。key，要写相对路径
-      }
+      },
+      remotes: {
+        AppTwo: 'AppTwo@http://192.168.3.61:7002/remoteEntry.js' // 引用
+      },
     }),
   ],
 }

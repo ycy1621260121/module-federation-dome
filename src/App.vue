@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <button-common />
   <HelloWorld msg="webpack5 + Vue" />
 </template>
 
